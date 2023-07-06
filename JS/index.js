@@ -51,19 +51,3 @@ function cambiarSeleccion() {
 inicio.addEventListener("click", cambiarSeleccion);
 sobreMi.addEventListener("click", cambiarSeleccion);
 proyectos.addEventListener("click", cambiarSeleccion);
-
-//<---CAMBIO DE COLOR SOBRE OPCION EN MENU--->
-
-/* let colorElementoA = document.querySelectorAll(".nav li a")
-
-colorElementoA.forEach(function(color){
-    color.addEventListener("click", function(){
-        this.classList.add("seleccionada");
-        colorElementoA.forEach(function(colorB){
-            if(colorB !== color){
-                colorB.classList.remove("seleccionada");
-            }
-        })
-    })
-})
- */
