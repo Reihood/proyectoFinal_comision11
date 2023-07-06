@@ -302,6 +302,9 @@ footer p{
         bottom: 0;
         background-color: #39A0ED;
     }
+    .nav li a:hover{
+        color:#fbfbfb
+    }
     .seleccionada{
         color: #ffffff;
     }
