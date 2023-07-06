@@ -1,55 +1,40 @@
 //ICONO MENU HAMBURGUESA
 document.querySelector(".icono_menu").addEventListener("click", animacionBarra);
 
-var linea1_barra_menu = document.querySelector(".linea1-barra-menu");
-var linea2_barra_menu = document.querySelector(".linea2-barra-menu");
-var linea3_barra_menu = document.querySelector(".linea3-barra-menu");
-var barraMenu = document.querySelector("menu_lateral")
+var linea1_barra_menu = document.querySelector(".linea1_barra_menu");
+var linea2_barra_menu = document.querySelector(".linea2_barra_menu");
+var linea3_barra_menu = document.querySelector(".linea3_barra_menu");
+var barraMenu = document.querySelector(".icono_menu")
 
 function animacionBarra(){
-    linea1_barra_menu.classList.toggle("activelinea1-barra-menu");
-    linea2_barra_menu.classList.toggle("activelinea2-barra-menu");
-    linea3_barra_menu.classList.toggle("activelinea3-barra-menu");
+    linea1_barra_menu.classList.toggle("activelinea1_barra_menu");
+    linea2_barra_menu.classList.toggle("activelinea2_barra_menu");
+    linea3_barra_menu.classList.toggle("activelinea3_barra_menu");
 }
-//MOVIMIENTO BODY Y MENU LATERAL
-let menuLateral = document.getElementById("menu_lateral");
-let btnAbrir = document.getElementById("btn_abrir");
-let body = document.getElementById("body");
+function cambioColor(){
+    
+}
+//MOVIMIENTO MENU LATERAL
+let cerrarBarra = document.querySelector(".nav")
+let abrirBarra = document.querySelector(".nav_open")
+let iconoMenu = document.querySelector(".icono_menu")
+let cerrarIcono = document.querySelector(".icono_menu_close")
+let colorSpan = document.querySelector(".icono_menu_close span")
 
 //FUNCION PARA ABRIR Y CERRAR MENU LATERAL
-function abrir_cerrar_menu(){
-    body.classList.toggle("movimiento_body")
-    menuLateral.classList.toggle("movimiento_menu_lateral")
+function abrir_cerrar_menu() {
+    cerrarBarra.classList.toggle("nav_open");
+    iconoMenu.classList.toggle("icono_menu_close")
 }
 
 //EVENTO PARA APERTURA Y CIERRE DE MENU
 document.getElementById("btn_abrir").addEventListener("click", abrir_cerrar_menu);
 
-//OCULTAR MENU SI EL ANCHO ES MENOR A 576PX
-if(window.innerWidth < 576){
-    body.classList.add("movimiento_body");
-    menuLateral.classList.add("movimiento_menu_lateral")
-}
 
-//HACIENDO EL MENU RESPONSIVE
-window.addEventListener("resize", function(){
-    if(window.innerWidth > 576){
-        body.classList.remove("movimiento_body");
-        menuLateral.classList.remove("movimiento_menu_lateral");
-    }else{
-        body.classList.add("movimiento_body");
-        menuLateral.classList.add("movimiento_menu_lateral");
-    }
-    /* if(window.innerWidth < 576){
-        body.classList.add("movimiento_body");
-        menuLateral.classList.add("movimiento_menu_lateral")
-    } */
-})
 //MOVIMIENTO BARRA VERIFICADORA DE SECCION
 let inicio = document.querySelector(".seleccionable1")
 let sobreMi = document.querySelector(".seleccionable2")
 let proyectos = document.querySelector(".seleccionable3")
-let contacto = document.querySelector(".seleccionable4")
 
 function cambiarSeleccion() {
     let seleccionada = document.querySelectorAll(".seleccionada");
@@ -66,4 +51,4 @@ function cambiarSeleccion() {
 inicio.addEventListener("click", cambiarSeleccion);
 sobreMi.addEventListener("click", cambiarSeleccion);
 proyectos.addEventListener("click", cambiarSeleccion);
-contacto.addEventListener("click", cambiarSeleccion);
+

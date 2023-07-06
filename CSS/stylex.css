@@ -63,14 +63,14 @@ header{
     padding-right: 10px;
 }
 /*MENU HAMBURGUESA*/
-.barra_menu{
+.icono_menu{
     width: 30px;
     height: 30px;
     cursor: pointer;
     margin-top: 6px;
     transform-origin: 0px;
 }
-.barra_menu span{
+.icono_menu span{
     display: none;
     width: 100%;
     height: 2px;
@@ -110,6 +110,13 @@ header{
 }
 .sobre_mi{
     width: 65%;
+    padding: 20px;
+}
+.sobre_mi h1{
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.sobre_mi p{
     padding: 20px;
 }
 .btn{
@@ -251,20 +258,22 @@ footer p{
         top: 0;
         left: 0;
     }
-    .menu nav{
+    .nav{
         position: absolute;
         top: 0;
         right: 0;
         box-shadow: 0 0 0 100vh rgba(0, 0, 0, .5);
         opacity: 0;
         visibility: hidden;
+        transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
     }
-    .menu nav.open{
+    .nav_open{
         opacity: 1;
         visibility: visible;
+        transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
     }
     .menu nav ul{
-        width: 150px;
+        width: 170px;
         height: 100vh;
         padding: 20px;
         flex-direction: column;
@@ -274,11 +283,32 @@ footer p{
         bottom: 0;
         background-color: #39A0ED;
     }
+    .seleccionada{
+        color: #ffffff;
+    }
+    .seleccionada:before{
+        content: '';
+        width: 3px;
+        height: auto;
+        background-color: #ffffff;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        border-radius: 2px;
+    }
 /*MENU HAMBURGUESA*/
-    .barra_menu{
+    .icono_menu{
         margin-right: 50px;
     }
-    .barra_menu span{
+    .icono_menu_close{
+        margin-right: 120px;
+        border-radius: .3rem;
+        z-index: 100;
+    }
+    .icono_menu_close span{
+        background-color: #fbfbfb;
+    }
+    .icono_menu span{
         display: block;
     }
     /*INICIO*/
