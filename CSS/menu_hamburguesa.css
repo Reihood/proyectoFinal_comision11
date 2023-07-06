@@ -1,0 +1,156 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Open Sans', sans-serif;
+    text-decoration: none
+}
+/*BODY*/
+body{
+    margin-left: 70px;
+}
+/*HEADER*/
+header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    background-color: #fbfbfb;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+}
+/*MENU*/
+.container_icono_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 90px;
+    transform: translateX(10px);
+}
+/*LOGO*/
+.nombre_pag{
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    color: #ffffff;
+}
+.nombre_pag a img{
+    width: 25px;
+    border-radius: 100%;
+    margin-right: 14px;
+}
+/*MENU LATERAL*/
+.menu_lateral{
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #af599e;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+}
+/* OCULTAR SCROLL PARA CHROME, SAFARI Y OPERA*/
+.menu_lateral::-webkit-scrollbar{
+    display: none;
+}
+/*OCULTAR SCROLL PARA EDGE Y FIREFOX*/
+.menu_lateral{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.opcion_menu{
+    padding: 20px 30px;
+    margin-top: 70px;
+    position: absolute;
+}
+.opcion_menu a{
+    color: #ffffffb2;
+    position: relative;
+    display: block;
+    cursor: default;
+}
+.opcion_menu a:hover{
+    color: #ffffff;
+    transition: color 300ms;
+}
+.opcion_menu .opcion a{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.opcion_menu .opcion i{
+    margin-right: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.opcion_menu .opcion h4{
+    font-weight: 300;
+    transform: translateY(4px);
+    cursor: pointer;
+}
+/*INDICADOR DE SELLECION*/
+.seleccionada{
+    color: #ffffff;
+}
+.seleccionada:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+    border-radius: 2px;
+}
+/*CLASES PARA USAR EN JAVASCRIPT*/
+.movimiento_body{
+    margin-left: 200px;
+}
+.movimiento_menu_lateral{
+    width: 200px;
+}
+/*<--MENU HAMBURGUESA-->*/
+.icono_menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 6px;
+    transform-origin: 0px;
+}
+.icono_menu span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #af599e;
+    border-radius: 10px;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+.activelinea1-barra-menu{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+.activelinea2-barra-menu{
+    opacity: 0;
+    margin-left: -40px;
+}
+.activelinea3-barra-menu{
+    transform: rotate(-45deg) translate(-4px,2px);
+}
+/*<--RESPONSIVE-->*/
+@media (min-width:360px) and (max-width:576px){
+    .movimiento_body{
+        margin-left: 0px;
+    }
+    .movimiento_menu_lateral{
+        width: 80px;
+        left: -80px;
+    }
+}

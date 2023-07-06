@@ -1,0 +1,376 @@
+/*IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*PALETA DE COLORES/*
+//#FFFFFF: BLANCO
+//#39A0ED: AZUL CELESTIAL
+//#0A1045: AZUL PENN
+/*BODY*/
+body{
+    background-color: #fbfbfb;
+    max-width: 1920px;
+    max-height: 1080px;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.3rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*HEADER*/
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(10, 16, 69, 0.502);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+    width: 90px;
+    display: block;
+    border-radius: 100%;
+}
+.menu{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.menu nav ul{
+    list-style: none;
+    gap:.7rem ;
+    display: inline-flex;
+    padding-right: 10px;
+}
+/*MENU HAMBURGUESA*/
+.barra_menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 6px;
+    transform-origin: 0px;
+}
+.barra_menu span{
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #39A0ED;
+    border-radius: 10px;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+.activelinea1_barra_menu{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+.activelinea2_barra_menu{
+    opacity: 0;
+    margin-left: -40px;
+}
+.activelinea3_barra_menu{
+    transform: rotate(-45deg) translate(-4px,2px);
+}
+/*INICIO*/
+.container_inicio{
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foto{
+    width: 35%;
+}
+.foto img{
+    width: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+}
+.sobre_mi{
+    width: 65%;
+    padding: 20px;
+}
+.btn{
+    padding-top: 50px;
+}
+#btn{
+    background-color: #0e1764;
+    height: 3.2rem;
+    width: 9rem;
+    border-radius: 2rem;
+}
+#btn a{
+    color: #fbfbfb;
+}
+/*PROYECTOS*/
+.container_proyectos{
+    width: 100%;
+    height: 70vh;
+}
+.texto_proyecto{
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+.texto_proyecto h2{
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.texto_proyecto p{
+    background-color: #399fed7e;
+    border-radius: 1rem;
+    padding: 20px;
+    width: 50rem;
+    margin: auto;
+}
+.container_img_proyectos{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 15px;
+    padding: 40px;
+}
+.container_img_proyectos img{
+    width: 400px;
+    display: block;
+}
+/*TECNOLOGIAS*/
+.container_tecnologias{
+    width: 100%;
+    height: auto;
+}
+.texto_tecnologias h2{
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.container_img_tecnologias{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 15px;
+    padding: 40px;
+}
+.container_img_tecnologias img{
+    width: 300px;
+    display: block;
+}
+/*CONTACTO*/
+.container_contacto{
+    width: 100%;
+    height: 100vh;
+}
+.texto_contacto{
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.texto_contacto h2{
+    margin-top: 90px;
+}
+.texto_contacto p{
+    background-color: #399fed7e;
+    border-radius: 1rem;
+    padding: 20px;
+    width: 50rem;
+    margin: auto;
+}
+.container_img_contacto{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 15px;
+    padding: 40px;
+}
+.container_img_contacto img{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+/*FOOTER*/
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: #39A0ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-weight: 700;
+}
+/*RESPONSIVE TABLETS*/
+@media screen and (min-width:720px) and (max-width:834px){
+
+}
+/*RESPONSIVE MOVIL*/
+@media (min-width:360px) and (max-width:576px){
+    /*FONT-SIZE*/
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    p{
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    /*HEADER*/
+    header{
+/*         display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        top: 0;
+        left: 0;
+    }
+    .menu nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, .5);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu nav.open{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu nav ul{
+        width: 150px;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        align-items: end;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #39A0ED;
+    }
+/*MENU HAMBURGUESA*/
+    .barra_menu{
+        margin-right: 50px;
+    }
+    .barra_menu span{
+        display: block;
+    }
+    /*INICIO*/
+    .container_inicio{
+        width: auto;
+        height: auto;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    .foto{
+        width: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .foto img{
+        display: block;
+        margin: auto;
+        width: 300px;
+    }
+    .sobre_mi{
+        width: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .sobre_mi h1{
+        margin-bottom: 20px;
+    }
+    .sobre_mi p{
+        text-align: justify;
+    }
+    /*PROYECTOS*/
+    .container_proyectos{
+        width: auto;
+        height: auto;
+    }
+    .texto_proyecto p{
+        width: auto;
+        text-align: justify;
+        background-color: #399fed7e;
+        border-radius: 1rem;
+        padding: 20px;
+    }
+    .container_img_proyectos{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .container_img_proyectos img{
+        width: 300px;
+        margin: auto;
+    }
+    /*TECNOLOGIAS*/
+    .container_tecnologias{
+        width: auto;
+        height: auto;
+    }
+    .container_img_tecnologias{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .container_img_tecnologias img{
+        width: 250px;
+        margin: auto;
+    }
+    /*CONTACTO*/
+    .container_contacto{
+        width: auto;
+        height: auto;
+    }
+    .texto_contacto h2{
+        margin-bottom: 30px;
+    }
+    .texto_contacto p{
+        width: auto;
+        text-align: justify;
+        background-color: #399fed7e;
+        border-radius: 1rem;
+        padding: 20px;
+    }
+    .container_img_contacto{
+        width: auto;
+        height: auto;
+    }
+    .container_img_contacto img{
+        width: 100px;
+        margin: auto;
+    }
+    /*FOOTER*/
+    footer{
+        width: auto;
+    }
+    footer p{
+        font-size: 14px;
+    }
+}

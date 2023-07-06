@@ -1,0 +1,463 @@
+/*IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*BODY*/
+body{
+    background-color: #fbfbfb;
+    max-width: 1920px;
+    max-height: 1080px;
+    font-family: 'Montserrat', sans-serif;
+}
+.h2{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+/*HEADER*/
+header{
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1;
+}
+.contenedor-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+}
+/* .nav-list{
+    background-color: #af599e;
+} */
+.nav-list ul{
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+}
+.nav-list a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+}
+.nav-list a:hover{
+    color: #af599e;
+    transition: 150ms;
+}
+.nav-list a:not(:hover){
+    color: #000000;
+    transition: 150ms;
+}
+/*<--MENU HAMBURGUESA-->*/
+.barra-menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 6px;
+    transform-origin: 0px;
+}
+.barra-menu span{
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #af599e;
+    border-radius: 10px;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+.activelinea1-barra-menu{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+.activelinea2-barra-menu{
+    opacity: 0;
+    margin-left: -40px;
+}
+.activelinea3-barra-menu{
+    transform: rotate(-45deg) translate(-4px,2px);
+}
+/*MAIN*/
+main{
+    height: 100%;
+    width: 100%;
+}
+/*SOBRE MI*/
+.contenedor-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.contenedor-foto{
+    width: 40%;
+    height: 100vh;
+    padding-left: 5rem;
+}
+.foto{
+    width: 400px;
+    border-radius: 100%;
+    margin-top: 120px;
+}
+.contenedor-texto{
+    width: 60%;
+    height: 50vh;
+    text-align: left;
+    padding: 20px;
+}
+.contenedor-texto h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.contenedor-texto p{
+    font-size: 25px;
+    margin: 30px 0px 50px 0px;
+}
+.btn{
+    background-color: #af599e;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.btn a{
+    text-decoration: none;
+    color: #fbfbfb;
+}
+.btn a:hover{
+    color: #000000;
+    transition: 200ms;
+}
+.btn a:not(:hover){
+    transition: 500ms;
+}
+/*PROYECTOS*/
+.contenedor-proyecto{
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+    width: 100vh;
+}
+.h2-proyecto{
+    height: 20vh;
+}
+.p-proyectos{
+    background-color: rgba(175, 89, 158, 0.3);
+    border-radius: 1rem;
+    font-size: 25px;
+    padding: 10px;
+}
+.img-portafolio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    gap: 20px;
+}
+.contenedor-proyecto img{
+    width: 400px;
+    border-radius: 0.3rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.contenedor-proyecto img:hover{
+    transform: scale(1.2);
+    transition: 150ms ease;
+}
+.contenedor-proyecto img:not(:hover){
+    transform: none;
+    transition: 250ms;
+}
+/*TECNOLOGIAS*/
+.contenedor-tecnologias{
+    height: 80vh;
+    width: 100vh;
+    text-align: center;
+    margin: auto;
+}
+.img-tecnologias{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+}
+.img-tecnologias img{
+    width: 250px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+/*CONTACTO*/
+.contenedor-contacto{
+    height: 100vh;
+    width: 100vh;
+    text-align: center;
+    margin: auto;
+}
+.p-contacto{
+    background-color: rgba(175, 89, 158, 0.3);
+    border-radius: 1rem;
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.p-contacto h2{
+    padding: 15px;
+}
+.img-contacto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+}
+.img-contacto img{
+    width: 250px;
+    border-radius: 1rem;  
+}
+/*FOOTER*/
+footer{
+    height: 60px;
+    width: 100%;
+    background-color: #af599e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 22px;
+    font-weight: bold;
+    color: #fbfbfb;
+}
+
+@media screen and (min-width:720px) and (max-width:834px) {
+    /*BODY*/
+    body{
+        width: auto;
+        height: auto;
+    }
+    /* .h2{
+        
+    } */
+    /*HEADER*/
+    /* header{
+
+    }
+    .nav-list{
+
+    } */
+    /*MAIN*/
+    main{
+        height: auto;
+        width: auto;
+    }
+    /*SOBRE MI*/
+    .contenedor-inicio{
+        width: auto;
+        height: 100vh;
+    }
+    .contenedor-foto{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .foto{
+        width: 300px;
+    }
+    .contenedor-texto{
+        width: auto;
+    }
+    /*PROYECTO*/
+    .contenedor-proyecto{
+        width: auto;
+        height: 100vh;
+        padding: 20px;
+    }
+    .h2-proyecto{
+        width: auto;
+        height: 20vh;
+    }
+    .p-proyectos{
+        width:70vh;
+        height: auto;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .img-portafolio{
+        width: auto;
+        flex-direction: column;
+        height: 70vh;
+    }
+    .contenedor-proyecto img{
+        width: 500px;
+    }
+    /*TECNOLOGIAS*/
+    .contenedor-tecnologias{
+        width: auto;
+        height: 40vh;
+        margin-top: 150px;
+    }
+    .img-tecnologias{
+        width: auto;
+        gap: 2px
+    }
+    .img-tecnologias img{
+        width: 170px;
+    }
+    /*CONTACTO*/
+    .contenedor-contacto{
+        width: auto;
+        height: 80vh;
+        padding: 20px;
+    }
+    .img-contacto{
+        width: auto;
+        height: 30vh;
+    }
+    .img-contacto img{
+        width: 150px;
+    }
+    /*FOOTER*/
+    footer{
+        width: auto;
+    }
+}
+
+@media (min-width:360px) and (max-width:576px){
+    header{
+        width: 100%;
+        height: 70px;
+        position: fixed;
+    }
+    .nav-list ul{
+        margin-top: 85px;
+        flex-direction: column;
+        background-color: #af599e;
+        width: 120px;
+    }
+    .barra-menu{
+        margin-right: 10px;
+    }
+    .barra-menu span{
+        display: block;
+    }
+    /*SOBRE MI*/
+    main{
+        width: 100%;
+    }
+    .contenedor-inicio{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .contenedor-foto{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .contenedor-texto{
+        flex-direction: column;
+        width: 100%;
+        text-align:center;
+    }
+    .foto{
+        width: 300px;
+
+    }
+    .contenedor-inicio p{
+        font-size: 18px;
+    }
+    .contenedor-inicio h1{
+        font-size: 35px;
+    }
+    .btn{
+        margin-bottom: 100px;
+    }
+/*PROYECTOS*/
+.contenedor-proyecto{
+    width: auto;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.h2-proyecto{
+    width: auto;
+    height: 20vh;
+
+}
+.p-proyectos{
+    width: auto;
+}
+.img-portafolio{
+    width: auto;
+    flex-direction: column;
+}
+.img-portafolio{
+    width: 120px;
+    margin:auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+.contenedor-proyecto img{
+    width: 320px;
+}
+.contenedor-proyecto img:hover{
+    transform: none;
+}
+.h2{
+    width: auto;
+    font-size: 26px;
+}
+/* TECNOLOGIAS */
+.contenedor-tecnologias{
+    width: auto;
+    height: 40vh;
+    margin-top: 100px;
+}
+
+.img-tecnologias{
+    gap: 1px;
+}
+.img-tecnologias img{
+    width: 90px;
+}
+/* CONTACTO */
+.contenedor-contacto{
+    width: auto;
+    height: 110vh;
+    padding: 20px;
+}
+.img-contacto{
+    width: 100%;
+    gap: 2px;
+    margin-bottom: 100px;
+}
+.img-contacto img{
+    width: 90px;
+}
+footer{
+    width: auto;
+    height: 60px;
+}
+footer p{
+    font-size: 12px;
+}
+}
