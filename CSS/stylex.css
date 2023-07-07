@@ -303,7 +303,7 @@ footer p{
         background-color: #39A0ED;
     }
     .nav li a:hover{
-        color:#fbfbfb
+        color:#fbfbfb 
     }
     .seleccionada{
         color: #ffffff;
@@ -416,6 +416,110 @@ footer p{
     }
     .container_img_contacto img{
         width: 100px;
+        margin: auto;
+    }
+    /*FOOTER*/
+    footer{
+        width: auto;
+    }
+    footer p{
+        font-size: 14px;
+    }
+}
+@media (min-width:700px) and (max-width:1280px){
+    /*FONT-SIZE*/
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    p{
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: justify;
+    }
+    /*HEADER*/
+    header {
+        width: 100%;
+    }
+    .container_header{
+        width: auto;
+        height: auto;
+    }
+    /*INICIO*/
+    .container_inicio{
+        width: auto;
+        height: 90vh;
+    }
+    .foto{
+        width: auto;
+        margin: auto;
+        padding: 20px;
+    }
+    .sobre_mi{
+        width: auto;
+    }
+    /*PROYECTOS*/
+    .container_proyectos{
+        height: auto;
+        width: auto;
+    }
+    .texto_proyecto{
+        width: auto;
+        height: auto;
+    }
+    .texto_proyecto p{
+        width: auto;
+        text-align: justify;
+        background-color: #399fed7e;
+        border-radius: 1rem;
+        padding: 20px;
+    }
+    .container_img_proyectos{
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+    .container_img_proyectos img{
+        width: 550px;
+        margin: auto;
+    }
+    /*TECNOLOGIAS*/
+    .container_tecnologias{
+        width: auto;
+        height: auto;
+    }
+    .container_img_tecnologias{
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+    }
+    .container_img_tecnologias img{
+        width: 350px;
+        margin: auto;
+    }
+    /*CONTACTO*/
+    .container_contacto{
+        width: auto;
+        height: auto;
+    }
+    .texto_contacto h2{
+        margin-bottom: 30px;
+    }
+    .texto_contacto p{
+        width: auto;
+        text-align: justify;
+        background-color: #399fed7e;
+        border-radius: 1rem;
+        padding: 20px;
+    }
+    .container_img_contacto{
+        width: auto;
+        height: auto;
+    }
+    .container_img_contacto img{
+        width: 200px;
         margin: auto;
     }
     /*FOOTER*/
